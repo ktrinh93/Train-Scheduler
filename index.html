@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./assets/javascript/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
 
@@ -43,29 +45,14 @@
                                 <tr>
                                 <th scope="col">Train Name</th>
                                 <th scope="col">Destination</th>
-                                <th scope="col">Arrival Time</th>
-                                <th scope="col">Departure Time</th>
+                                <th scope="col">First Train</th>
+                                <th scope="col">Frequency (mins)</th>
+                                <th scope="col">Next Train</th>
+                                <th scope="col">Time Until Next Train (mins)</th>
+                                <th scope="col">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -86,21 +73,21 @@
                         <form>
                             <div class="form-group">
                                 <label for="train-name">Train Name</label>
-                                <input class="form-control" id="train-name">
+                                <input class="form-control" id="train-name" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="train-destination">Train Destination</label>
-                                <input class="form-control" id="train-destination">
+                                <input class="form-control" id="train-destination" type="text">
                             </div>
                             <div class="form-group">
-                                <label for="train-arrival">Train Arrival Time</label>
-                                <input class="form-control" id="train-arrival">
+                                <label for="first-train">First Train Time</label>
+                                <input class="form-control" id="first-train" type="time">
                             </div>
                             <div class="form-group">
-                                <label for="train-departure">Train Departure Time</label>
-                                <input class="form-control" id="train-departure">
+                                <label for="Frequency">Frequency (minutes)</label>
+                                <input class="form-control" id="frequency" type="number">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
